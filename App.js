@@ -28,7 +28,7 @@ export default function App() {
           <TouchableOpacity
             style={styles.button}
             onPress={() => {
-              setType(type === CameraType.back ? CameraType.front : CameraType.back);
+              setType(type === Camera.Constants.Type.back ? Camera.Constants.Type.front : Camera.Constants.Type.back);
             }}>
             <Text style={styles.text}> Flip </Text>
           </TouchableOpacity>
@@ -46,5 +46,20 @@ const styles = StyleSheet.create({
   camera: {
     width: "100%",
     height: "100%"
-  }
+  },
+  buttonContainer: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    flexDirection: 'row',
+    margin: 20,
+  },
+  button: {
+    flex: 0.1,
+    alignSelf: 'flex-end',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 18,
+    color: 'white',
+  },
 });
